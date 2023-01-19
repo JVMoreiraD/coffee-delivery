@@ -1,17 +1,20 @@
-import { BenefitsContainer, IconContainer, MainSectionContainer } from "./styles";
+import { BenefitsContainer, IconContainer, MainSectionContainer, MainTextContainer } from "./styles";
 import coffee from '../../assets/coffee-display.svg'
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
+import { DefaultText, Headers } from "../Text";
 
 export function MainSection() {
     return (
         <MainSectionContainer>
             <div>
-                <section>
-                    <div>
-                        <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-                        <h3>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h3>
-                    </div>
-                </section>
+                <MainTextContainer>
+                    <Headers fontSize="48px" fontWeight="Bolder">
+                        Encontre o café perfeito <br />para qualquer hora do dia
+                    </Headers >
+                    <DefaultText fontSize="20px" fontWeight="normal" lineHeight={130} as="h3">
+                        Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora
+                    </DefaultText >
+                </MainTextContainer>
 
                 <BenefitsContainer>
                     <div>
@@ -40,7 +43,9 @@ export function MainSection() {
                     </div>
                 </BenefitsContainer>
             </div>
-            <img src={coffee}></img>
+            <div>
+                <img src={coffee}></img>
+            </div>
         </MainSectionContainer>
     )
 }

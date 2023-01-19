@@ -1,14 +1,15 @@
 import styled, { css } from "styled-components";
-
+import background from '../../assets/background.svg'
 export const MainSectionContainer = styled.section`
     width: 100%;
     height: 34rem;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3.5rem;
+    background: ${() => `url(${background})`} no-repeat center;
+    background-size: cover;
     padding: 2rem 10rem;
+
 
   `
 export const BenefitsContainer = styled.div`
@@ -42,4 +43,15 @@ export const IconContainer = styled.div<IconProps>`
         css`
         background: ${props.theme[`${props.variant}`]};
         `}
-` 
+`
+export const MainTextContainer = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 36.75rem;
+    height: 12rem;
+    left: calc(50% - 36.75rem/2 - 16.625rem);
+    top: calc(50% - 12rem/2 - 5.125rem);
+
+`

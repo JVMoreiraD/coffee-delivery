@@ -8,11 +8,11 @@ export function Header() {
       <img src={logoCoffee} alt="" />
       <HeaderCornerContainer>
         <LocationContainer >
-
-          <MapPin size={24} weight='fill' /> Porto Alegre, RS
+          <MapPin size={22} weight='fill' />
+          Porto Alegre, RS
         </LocationContainer>
         <CartContainer >
-          <ShoppingCart size={24} weight='fill' />
+          <ShoppingCart size={22} weight='fill' />
         </CartContainer>
       </HeaderCornerContainer>
     </HeaderComponent>

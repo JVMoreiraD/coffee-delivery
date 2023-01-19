@@ -7,32 +7,44 @@ export const HeaderComponent = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  /* position: initial; */
   padding: 2rem 10rem;
+  left: 0px;
+  right: 0px;
+  top: 0px;
 `
 
 export const HeaderCornerContainer = styled.div`
   display: flex;
+  align-items: center;
   gap: 0.75rem;
 `
 
 export const LocationContainer = styled.nav`
   display: flex;
   flex-direction: row;
-  gap: 0.25;
+  gap: 0.25rem;
   justify-content: flex-end;
   align-items: center;
   color: ${({ theme }) => theme['purple-dark']};
   background-color: ${({ theme }) => theme['purple-light']};
-  padding: 1rem;
+  padding: 0.5rem;
+
   border-radius: 6px;
   cursor: pointer;
+  > svg {
+  color: ${({ theme }) => theme['purple']};
+  }
 `
 
 export const CartContainer = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: ${({ theme }) => theme['yellow-dark']};
   background-color: ${({ theme }) => theme['yellow-light']};
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 6px;
   cursor: pointer;
+
 `
