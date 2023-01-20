@@ -4,6 +4,7 @@ interface DefaultTextProps {
     fontSize: "10px" | "14px" | "16px" | "18px" | "20px" | "24px"
     fontWeight: "normal" | "Bold"
     lineHeight?: 130 | 160
+    uppercase?: true
 }
 
 export const DefaultText = styled.p<DefaultTextProps>`
@@ -14,9 +15,10 @@ export const DefaultText = styled.p<DefaultTextProps>`
         font-weight: ${props.fontWeight};
         font-size: ${props.fontSize};
         `}
-    width: 588px;
-    height: 52px;
     color: ${({ theme }) => theme['base-subtitle']};
+    &:uppercase {
+     text-transform: uppercase;
+    }
 
 `
 

@@ -3,6 +3,7 @@ import { DefaultTheme } from './styles/themes/default'
 import { GlobalStyle } from './styles/global'
 import { Header } from './components/Header'
 import { MainSection } from './components/MainSection'
+import { CoffeeCard } from './components/CoffeeCard'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <GlobalStyle />
       <Header></Header>
       <MainSection></MainSection>
+      <CoffeeCard />
     </ThemeProvider>
   )
 }
