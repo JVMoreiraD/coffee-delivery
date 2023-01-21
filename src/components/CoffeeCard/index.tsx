@@ -1,6 +1,6 @@
-import { MathOperations, Plus, ShoppingCart } from "phosphor-react";
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { DefaultText, Headers } from "../Text";
-import { BuyInfo, Cart, CoffeeAvatar, CoffeeCardBox, CoffeeInfo, CoffeeName, CoffeeTag, QuantityController } from "./styles";
+import { BuyInfo, Cart, CoffeeAvatar, CoffeeCardBox, CoffeeInfo, CoffeeName, CoffeeTag, MathOperators, QuantityController } from "./styles";
 
 
 
@@ -9,7 +9,7 @@ export function CoffeeCard() {
         <CoffeeCardBox>
             <CoffeeAvatar src="/assets/Image.svg" />
             <CoffeeTag>
-                <DefaultText fontSize="10px" fontWeight="Bold" uppercase>
+                <DefaultText fontSize="10px" fontWeight="Bold">
                     Tradicional
                 </DefaultText>
             </CoffeeTag>
@@ -19,24 +19,24 @@ export function CoffeeCard() {
                 </Headers>
             </CoffeeName>
             <CoffeeInfo>
-                <DefaultText fontSize="14px" fontWeight="normal" uppercase>
+                <DefaultText fontSize="14px" fontWeight="normal">
                     O tradicional café feito com água quente e grãos moídos
                 </DefaultText>
             </CoffeeInfo>
-            {/* <BuyInfo>
-                <Cart>
-                    <ShoppingCart weight="fill" />
-                </Cart>
+            <BuyInfo>
                 <QuantityController>
-                    <MathOperations>
-                        <Plus />
-                    </MathOperations>
+                    <MathOperators>
+                        <Minus weight="bold" />
+                    </MathOperators>
                     <DefaultText fontWeight="Bold" fontSize="16px">1</DefaultText>
-                    <MathOperations>
-                        <Plus />
-                    </MathOperations>
+                    <MathOperators>
+                        <Plus weight="bold" />
+                    </MathOperators>
                 </QuantityController>
-            </BuyInfo> */}
+                {/* <Cart>
+                    <ShoppingCart weight="fill" />
+                </Cart> */}
+            </BuyInfo>
         </CoffeeCardBox>
     )
 } 

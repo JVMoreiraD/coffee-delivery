@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeaderComponent = styled.header`
   width: 100%;
   height: 6.5rem;
-  background: ${({ theme }) => theme['background']};
+  background: ${({ theme }) => theme.colors['background']};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,14 +26,14 @@ export const LocationContainer = styled.nav`
   gap: 0.25rem;
   justify-content: flex-end;
   align-items: center;
-  color: ${({ theme }) => theme['purple-dark']};
-  background-color: ${({ theme }) => theme['purple-light']};
+  color: ${({ theme }) => theme.colors['purple-dark']};
+  background-color: ${({ theme }) => theme.colors['purple-light']};
   padding: 0.5rem;
 
   border-radius: 6px;
   cursor: pointer;
   > svg {
-  color: ${({ theme }) => theme['purple']};
+  color: ${({ theme }) => theme.colors['purple']};
   }
 `
 
@@ -41,8 +41,8 @@ export const CartContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme['yellow-dark']};
-  background-color: ${({ theme }) => theme['yellow-light']};
+  color: ${({ theme }) => theme.colors['yellow-dark']};
+  background-color: ${({ theme }) => theme.colors['yellow-light']};
   padding: 0.5rem;
   border-radius: 6px;
   cursor: pointer;

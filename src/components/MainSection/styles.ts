@@ -29,7 +29,7 @@ interface IconProps {
 }
 
 export const IconContainer = styled.div<IconProps>`
-    color: ${({ theme }) => theme['white']};
+    color: ${({ theme }) => theme.colors['white']};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@ export const IconContainer = styled.div<IconProps>`
 
     ${(props) =>
         css`
-        background: ${props.theme[`${props.variant}`]};
+        background: ${props.theme.colors[`${props.variant}`]};
         `}
 `
 export const MainTextContainer = styled.section`

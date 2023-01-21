@@ -8,8 +8,10 @@ export const CoffeeCardBox = styled.div`
     position: absolute;
     width: 16rem;
     height: 19.375rem;
-    background: ${({ theme }) => theme['base-card']};
+    background: ${({ theme }) => theme.colors['base-card']};
     border-radius: 6px 36px;
+    left: 0px;
+    top: 0px;
 `
 
 export const CoffeeAvatar = styled.img`
@@ -22,20 +24,20 @@ export const CoffeeAvatar = styled.img`
 `
 
 export const CoffeeTag = styled.div`
-    color: ${({ theme }) => theme["yellow-dark"]};
+    color: ${({ theme }) => theme.colors["yellow-dark"]};
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0.25rem 0.5rem;
+    margin-bottom: 0.75rem;
     gap: 4px;
-    padding: 0;
     width: 5.063rem;
     height: 1.313rem;
-    background: ${({ theme }) => theme["yellow-light"]};
+    background: ${({ theme }) => theme.colors["yellow-light"]};
     border-radius: 100px;
     /* Inside auto layout */
-
+    text-transform: uppercase;
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -56,7 +58,7 @@ export const CoffeeName = styled.div`
     text-align: center;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    
+    margin-top: 1rem;
 
 `
 
@@ -71,49 +73,49 @@ export const CoffeeInfo = styled.div`
     font-size: 14px;
     line-height: 130%;
     text-align: center;
-
+    text-align: center;
     padding: 1.25rem;
 `
 
 export const BuyInfo = styled.div`
    /* Auto layout */
-
+    position: absolute;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 8px;
-
-    width: 118px;
-    height: 38px;
-
-
+    width: 7.375rem;
+    height: 2.375rem;
+    margin-top: 15.75rem;
+    background-color: red;
     /* Inside auto layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    /* flex: none; */
+    /* order: 1; */
+    /* flex-grow: 0; */
+
 `
 
 export const Cart = styled.div`
+    position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme['white']};
-  background-color: ${({ theme }) => theme['purple-dark']};
+  color: ${({ theme }) => theme.colors['white']};
+  background-color: ${({ theme }) => theme.colors['purple-dark']};
   padding: 0.5rem;
   border-radius: 6px;
   cursor: pointer;
 `
 export const QuantityController = styled.div`
-    flex: inherit;
+    display: flex;
     padding: 0.5rem;
     gap: 4px;
     justify-content: center;
     align-items: center;
-    background-color: ${({ theme }) => theme['base-button']};
+    background-color: ${({ theme }) => theme.colors['base-button']};
 `
-export const MathOperators = styled.div`
-    color: ${({ theme }) => theme['purple']};
+export const MathOperators = styled.button`
+    
+    color: ${({ theme }) => theme.colors['purple-dark']};
 
 `

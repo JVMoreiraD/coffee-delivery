@@ -10,32 +10,35 @@ export const GlobalStyle = createGlobalStyle`
 
     box-sizing: border-box;
 
+    outline: none;
+
+
   }
 
   :focus {
 
     outline: none;
 
-    box-shadow: 0 0 0 2px ${(props) => props.theme['white']};
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors['white']};
 
   }
 
   body {
 
-    background: ${(props) => props.theme['background']};
+    background: ${(props) => props.theme.colors['background']};
     
-    color: ${(props) => props.theme['base-text']};
+    color: ${(props) => props.theme.colors['base-text']};
 
     -webkit-font-smoothing: antialiased
   }
 
   body, input, textarea, button {
 
-    font-family: 'Baloo 2','Roboto', sans-serif;
+    font-family: ${({ theme }) => theme.fonts.regular};
 
     font-weight: 400;
 
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.defaultTextSize['md']}
 
   }
 
