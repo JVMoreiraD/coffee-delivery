@@ -12,7 +12,7 @@ function App() {
       <GlobalStyle />
       <Header></Header>
       <MainSection></MainSection>
-      <CoffeeCard />
+      {/* <CoffeeCard /> */}
     </ThemeProvider>
   )
 }

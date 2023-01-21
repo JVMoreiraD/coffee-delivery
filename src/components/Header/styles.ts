@@ -12,6 +12,7 @@ export const HeaderComponent = styled.header`
   left: 0px;
   right: 0px;
   top: 0px;
+  
 `
 
 export const HeaderCornerContainer = styled.div`

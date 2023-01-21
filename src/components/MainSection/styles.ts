@@ -20,6 +20,7 @@ export const BenefitsContainer = styled.div`
     column-gap: 2.5rem;
     > div {
         display: flex;
+        align-items: center;
         gap: 0.75rem;
     }
 `
