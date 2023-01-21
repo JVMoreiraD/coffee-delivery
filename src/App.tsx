@@ -4,6 +4,7 @@ import { GlobalStyle } from './styles/global'
 import { Header } from './components/Header'
 import { MainSection } from './components/MainSection'
 import { CoffeeCard } from './components/CoffeeCard'
+import { CoffeeSection } from './components/CoffeeSection'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
       <GlobalStyle />
       <Header></Header>
       <MainSection></MainSection>
-      {/* <CoffeeCard /> */}
+      <CoffeeSection></CoffeeSection>
     </ThemeProvider>
   )
 }
