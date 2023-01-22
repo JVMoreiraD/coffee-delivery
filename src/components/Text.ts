@@ -5,7 +5,7 @@ interface DefaultTextProps {
     fontWeight?: "normal" | "Bold"
     lineHeight?: 130 | 160
     uppercase?: true
-    color: "base-subtitle" | "yellow-dark"
+    color: "base-subtitle" | "yellow-dark" | "base-label" | "base-text"
 }
 
 export const DefaultText = styled.p<DefaultTextProps>`
@@ -14,12 +14,8 @@ export const DefaultText = styled.p<DefaultTextProps>`
         css`
         font-weight: ${props.fontWeight};
         font-size: ${props.fontSize};
-        color: ${props.color};
+        color: ${({ theme }) => theme.colors[props.color]};
         `}
-
-    &::fontWeight{
-        font-weight: lighter
-    }
 
 `
 

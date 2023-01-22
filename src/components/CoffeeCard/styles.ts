@@ -6,7 +6,6 @@ export const CoffeeCardBox = styled.div`
     align-items: center;
     flex-direction: column;
     width: 16rem;
-    /* height: 19.375rem; */
     background: ${({ theme }) => theme.colors['base-card']};
     border-radius: 6px 36px;
 `

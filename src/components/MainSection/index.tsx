@@ -22,25 +22,25 @@ export function MainSection() {
                             <IconContainer variant="yellow-dark">
                                 <ShoppingCart weight="fill" size={16} />
                             </IconContainer>
-                            <p>Compra simples e segura</p>
+                            <DefaultText color="base-text">Compra simples e segura</DefaultText>
                         </div>
                         <div>
                             <IconContainer variant="yellow">
                                 <Timer weight="fill" size={16} />
                             </IconContainer>
-                            <p>Entrega rápida e rastreada</p>
+                            <DefaultText color="base-text">Entrega rápida e rastreada</DefaultText>
                         </div>
                         <div>
                             <IconContainer variant="base-text">
                                 <Package weight="fill" size={16} />
                             </IconContainer>
-                            <p>Embalagem mantém o café intacto</p>
+                            <DefaultText color="base-text">Embalagem mantém o café intacto</DefaultText>
                         </div>
                         <div>
                             <IconContainer variant="purple">
                                 <Coffee weight="fill" size={16} />
                             </IconContainer>
-                            <p>O café chega fresquinho até você</p>
+                            <DefaultText color="base-text">O café chega fresquinho até você</DefaultText>
                         </div>
                     </BenefitsContainer>
                 </div>

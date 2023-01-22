@@ -1,9 +1,9 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { priceFormatter } from "../../utils/formatter";
 import { DefaultText, Headers } from "../Text";
 import { BuyInfo, Cart, CoffeeAvatar, CoffeeCardBox, CoffeeInfo, CoffeeName, CoffeeTag, CoffeeTagGroup, MathOperators, QuantityController } from "./styles";
 
 interface CoffeeProps {
-    // id: number
     name: string
     description: string
     imageURL: string
@@ -15,12 +15,12 @@ export function CoffeeCard(props: CoffeeProps) {
     const { description, imageURL, name, price, tags } = props
     return (
         <CoffeeCardBox>
-            <CoffeeAvatar src={imageURL} />
+            <CoffeeAvatar src={imageURL} alt="Imagem do café" />
             <CoffeeTagGroup>
                 {
                     tags.map((tag) => {
                         return (
-                            <CoffeeTag>
+                            <CoffeeTag key={tags.indexOf(tag)}>
                                 <DefaultText color="yellow-dark" fontSize="10px" fontWeight="Bold">
                                     {tag}
                                 </DefaultText>
@@ -35,16 +35,13 @@ export function CoffeeCard(props: CoffeeProps) {
                 </Headers>
             </CoffeeName>
             <CoffeeInfo>
-                <DefaultText color="base-subtitle" fontSize="14px" fontWeight="normal">
+                <DefaultText color="base-label" fontSize="14px" fontWeight="normal">
                     {description}
                 </DefaultText>
             </CoffeeInfo>
             <BuyInfo>
-                <DefaultText color="base-subtitle">
-                    R$
-                </DefaultText>
                 <Headers fontSize="18px" fontWeight="Bold">
-                    {price / 100}
+                    {priceFormatter.format(price / 100)}
                 </Headers>
                 <QuantityController>
                     <MathOperators>
