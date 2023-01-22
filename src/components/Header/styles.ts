@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 
 export const HeaderComponent = styled.header`
+  max-width: 1120px;
   width: 100%;
+  margin: 0 auto;
   height: 6.5rem;
   background: ${({ theme }) => theme.colors['background']};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* position: initial; */
-  padding: 2rem 10rem;
+  padding: 2rem 0;
   left: 0px;
   right: 0px;
   top: 0px;
-  
+
 `
 
 export const HeaderCornerContainer = styled.div`

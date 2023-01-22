@@ -42,4 +42,8 @@ export const GlobalStyle = createGlobalStyle`
 
   }
 
+  button {
+    all: unset
+  }
+
 `

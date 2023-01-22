@@ -1,41 +1,63 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { DefaultText, Headers } from "../Text";
-import { BuyInfo, Cart, CoffeeAvatar, CoffeeCardBox, CoffeeInfo, CoffeeName, CoffeeTag, MathOperators, QuantityController } from "./styles";
+import { BuyInfo, Cart, CoffeeAvatar, CoffeeCardBox, CoffeeInfo, CoffeeName, CoffeeTag, CoffeeTagGroup, MathOperators, QuantityController } from "./styles";
 
+interface CoffeeProps {
+    // id: number
+    name: string
+    description: string
+    imageURL: string
+    price: number
+    tags: string[]
+}
 
-
-export function CoffeeCard() {
+export function CoffeeCard(props: CoffeeProps) {
+    const { description, imageURL, name, price, tags } = props
     return (
         <CoffeeCardBox>
-            <CoffeeAvatar src="/assets/Image.svg" />
-            <CoffeeTag>
-                <DefaultText fontSize="10px" fontWeight="Bold">
-                    Tradicional
-                </DefaultText>
-            </CoffeeTag>
+            <CoffeeAvatar src={imageURL} />
+            <CoffeeTagGroup>
+                {
+                    tags.map((tag) => {
+                        return (
+                            <CoffeeTag>
+                                <DefaultText color="yellow-dark" fontSize="10px" fontWeight="Bold">
+                                    {tag}
+                                </DefaultText>
+                            </CoffeeTag>
+                        )
+                    })
+                }
+            </CoffeeTagGroup>
             <CoffeeName >
                 <Headers fontSize="20px" fontWeight="Bold">
-                    Expresso Tradicional
+                    {name}
                 </Headers>
             </CoffeeName>
             <CoffeeInfo>
-                <DefaultText fontSize="14px" fontWeight="normal">
-                    O tradicional café feito com água quente e grãos moídos
+                <DefaultText color="base-subtitle" fontSize="14px" fontWeight="normal">
+                    {description}
                 </DefaultText>
             </CoffeeInfo>
             <BuyInfo>
+                <DefaultText color="base-subtitle">
+                    R$
+                </DefaultText>
+                <Headers fontSize="18px" fontWeight="Bold">
+                    {price / 100}
+                </Headers>
                 <QuantityController>
                     <MathOperators>
                         <Minus weight="bold" />
                     </MathOperators>
-                    <DefaultText fontWeight="Bold" fontSize="16px">1</DefaultText>
+                    <DefaultText color="base-subtitle" fontWeight="Bold" fontSize="16px">1</DefaultText>
                     <MathOperators>
                         <Plus weight="bold" />
                     </MathOperators>
                 </QuantityController>
-                {/* <Cart>
+                <Cart>
                     <ShoppingCart weight="fill" />
-                </Cart> */}
+                </Cart>
             </BuyInfo>
         </CoffeeCardBox>
     )

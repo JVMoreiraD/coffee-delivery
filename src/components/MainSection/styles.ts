@@ -1,16 +1,20 @@
 import styled, { css } from "styled-components";
 import background from '../../assets/background.svg'
+
+export const MainDivContainer = styled.div`
+        max-width: 1120px;
+        width: 100%;
+        margin: 0 auto;
+         display: flex;
+        align-items: center;
+        justify-content: center;
+`
+
 export const MainSectionContainer = styled.section`
     width: 100%;
-    height: 34rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: ${() => `url(${background})`} no-repeat center;
     background-size: cover;
-    padding: 2rem 10rem;
-
-
+    padding: 2rem 0;
   `
 export const BenefitsContainer = styled.div`
     display: grid;

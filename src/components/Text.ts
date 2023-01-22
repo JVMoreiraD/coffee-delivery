@@ -5,6 +5,7 @@ interface DefaultTextProps {
     fontWeight?: "normal" | "Bold"
     lineHeight?: 130 | 160
     uppercase?: true
+    color: "base-subtitle" | "yellow-dark"
 }
 
 export const DefaultText = styled.p<DefaultTextProps>`
@@ -13,11 +14,9 @@ export const DefaultText = styled.p<DefaultTextProps>`
         css`
         font-weight: ${props.fontWeight};
         font-size: ${props.fontSize};
+        color: ${props.color};
         `}
-    color: ${({ theme }) => theme.colors["base-subtitle"]};
-    /* &:uppercase {
-     text-transform: uppercase;
-    } */
+
     &::fontWeight{
         font-weight: lighter
     }
@@ -40,7 +39,6 @@ export const Headers = styled.h1<HeadersProps>`
         `}
     flex: none;
     order: 0;
-    align-self: stretch;
     flex-grow: 0;
     color: ${({ theme }) => theme.colors["base-title"]};
 

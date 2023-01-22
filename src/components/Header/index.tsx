@@ -10,7 +10,7 @@ export function Header() {
       <HeaderCornerContainer>
         <LocationContainer >
           <MapPin size={22} weight='fill' />
-          <DefaultText >
+          <DefaultText color='base-subtitle' >
             Porto Alegre, RS
           </DefaultText>
         </LocationContainer>

@@ -6,7 +6,7 @@ export const LayoutContainer = styled.div`
   margin: 5rem auto;
   padding: 2.5rem;
 
-  background-color: ${(props) => props.theme['background']};
+  background-color: ${(props) => props.theme.colors["background"]};
 
   border-radius: 8px;
   display: flex;
